@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Inter",sans-serif;
+}
+.qrimg{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+}
+.appcontainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-label{
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(49, 171, 219);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+input[type="text"]
+{
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border:solid grey 2px;
+  border-radius: 5px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.button{
+    padding: 10px 15px;
+    color: white;
+    background-color: skyblue;
+    border:solid 2px;
+    border-radius: 5px;
+    transition: all 0.3s ;
+}
+.button:hover{
+    color: skyblue;
+    background-color: white;
+}
+.button:active{
+    background-color: white;
+    color: brown;
+}
+.download{
+    background-color: greenyellow;
+}
+.download:hover{
+    background-color: white;
+    border: solid 2px greenyellow;
+    color: greenyellow;
+}
+.download:active{
+    background-color: white;
+    color: brown;
+    border: solid 2px brown;
+}
+h1{
+    font-weight: 400;
+    color: slategray;
+}
+.footer{
+    margin-top: 350px;
+}
+
+.brand{
+    color: red;
+    font-size: 18px;
+    font-weight: 200;
+}
