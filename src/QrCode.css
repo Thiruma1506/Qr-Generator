@@ -5,10 +5,11 @@
     font-family: "Inter",sans-serif;
 }
 .qrimg{
-    height: 200px;
-    width: 200px;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+    height: max-content;
+    width: max-content;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    margin-bottom: 30px;
 }
 .appcontainer{
     width: 100%;

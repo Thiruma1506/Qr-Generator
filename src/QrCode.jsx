@@ -6,6 +6,7 @@ export const QrCode = () => {
     const[qrdata,setQrdata]=useState("https://www.youtube.com/");
     const[size,setSize]=useState("150");
 
+
     async function qrGen(){
  setLoading(true);
   try{
@@ -18,7 +19,16 @@ export const QrCode = () => {
   }
 }
 
-
+function DownloadQr(){
+  fetch(currentqr).then((response)=>response.blob()).then((blob)=>{
+    const downloadLink= document.createElement("a");
+    downloadLink.href= URL.createObjectURL(blob);
+    downloadLink.download="Qrcode.png";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  });
+}
 
   return (
     <div className="appcontainer">
@@ -41,8 +51,8 @@ export const QrCode = () => {
             
             
             <div className="buttons">
-              <button className="button generate" onClick={qrGen}>Generate QR Code</button>
-              <button className="button download">Download QR Code</button>
+              <button className="button generate"  disabled={loading} onClick={qrGen}>Generate QR Code</button>
+              <button className="button download" onClick={DownloadQr} >Download QR Code</button>
             </div>
         </div>
         <p className="footer">Designed by <span className="brand">Thirumavalavan</span> </p>
